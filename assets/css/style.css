@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.card {
+    display: inline-block;
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-content .content p {
+    margin: 0;
+    padding: 0px;
+}
+
+.card {
+    position: relative;
+    background-color: rgb(205, 233, 255);
+}
+
+.card footer button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 1rem;
+    height: 2rem;
+    /* font-size: 16px; */
+    line-height: 2rem;
+    border-radius: 25px;
+    background-color: #82e782;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}

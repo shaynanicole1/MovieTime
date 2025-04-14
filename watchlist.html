@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movietime</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/4fed1b79f0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="modal-dialog-container"></div>
+    <header>
+        <nav class="navbar is-flex-wrap-wrap is-justify-content-space-around">
+            <div class="navbar-brand mx-7">
+                <a class="navbar-item is-centered" href="index.html">
+                    <img src="./assets/images/logo.png" alt="logo" style="max-height: 100px;"
+                        class="mx-5 mb-0 px-2 py-0">
+                </a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <hr class="my-1">
+        <div id="main-cols" class="columns is-mobile is-multiline mt-3">
+            <div id="right-col" class="column is-12-mobile">
+                <div id="sort-cards-cols" class="columns is-mobile is-multiline">
+                    <div id="sort-col" id="" class="column is-12">
+                        <!-- sorting key select -->
+                        <div class="select ml-2">
+                            <select id="sorting-key">
+                                <option value="imdbRating">IMDb Rating</option>
+                                <option value="year">Release Year</option>
+                            </select>
+                        </div>
+                        <!-- sort order toggle button -->
+                        <button id="sorting-order" class="button ">9↘0</button>
+
+                        <button id="sort-btn" class="button is-primary">Sort</button>
+                    </div>
+                    <div id="cards-col" class="column is-12" style="border-bottom:2px solid rgb(215, 205, 205);">
+                        <div id="movie-container" class="columns is-mobile is-multiline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const sortOrderBtn = document.getElementById("sorting-order");
+
+            sortOrderBtn.addEventListener('click', function () {
+                if (this.textContent === '9↘0') {
+                    sortOrderBtn.textContent = '0↗9';
+                }
+                else {
+                    sortOrderBtn.textContent = '9↘0';
+                }
+            });
+
+        </script>
+        <script src="./assets/js/api_call.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/watch_list.js"></script>
+
+</body>
+
+</html>
